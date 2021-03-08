@@ -1,0 +1,62 @@
+ul {
+    list-style: none;
+    width: 900px;
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul li {
+    width: 100%;
+    padding: 8px 16px;
+    margin: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0,0, .25);
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.item div {
+    padding: 16px 8px;
+}
+
+.item .name {
+    flex: 1;
+    text-align: left;;
+}
+
+.item .price {
+    width: 75px;
+}
+
+.item .action {
+    width: 150px;
+    text-align: right;
+}
+
+.item .input {
+    display: flex;
+    flex-direction: row;
+}
+
+.item .input input {
+    width: 50px;
+}
+
+p {
+    text-align: center;
+}
+
+.total {
+    font-size: 18px;
+    text-align: center;
+}

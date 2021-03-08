@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/main.css" />
+    <meta charset="utf-8" />
+</head>
+
+<body>
+
+    <div id="cart">
+        <ul>
+            <li>
+                <div class="item" v-for="(item, index) in items">
+                    <div class="name">{{item.name}}</div>
+                    <div class="input">
+                        <button type="button" @click="item.qty = item.qty - 1">-</button>
+                        <input type="text" v-model.number="item.qty" />
+                        <button type="button" @click="item.qty = item.qty + 1">+</button>
+                    </div>
+                    <div class="price">{{ lineTotal(item) }}</div>
+                    <div class="action">
+                        <button type="button" @click="remove(index)">remove</button>
+                    </div>
+
+            </li>
+        </ul>
+        <div class="total">Total value <strong>{{total}}</strong></div>
+    </div>
+
+    <p><strong>-----------------------------------</strong></p>
+    <p>
+
+        SOME COMPONENT CREATED BY THE SERVER!
+    </p>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: "#cart",
+            computed: {
+                total() {
+                    return this.items.map(it => it.price * it.qty).reduce((sum, val) => sum + val);
+                }
+            },
+            data: {
+                items: [
+                    { name: "Royal Bread", qty: 1, price: 1.49 },
+                    { name: "Honey", qty: 1, price: 1.99 }
+                ]
+            },
+            methods: {
+                lineTotal(item) {
+                    return item.qty * item.price;
+                },
+                remove(index) {
+                    this.items.splice(index, 1);
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
