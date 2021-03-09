@@ -1,0 +1,27 @@
+{
+  "name": "course",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "author": "",
+  "scripts": {
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "express": "^4.17.1",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "vue": "^2.6.12",
+    "vue-cli": "^2.9.6",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "_id": "course@1.0.0",
+  "license": "ISC",
+  "readme": "ERROR: No README data found!"
+}
